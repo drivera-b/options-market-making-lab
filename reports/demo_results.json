@@ -1,0 +1,73 @@
+{
+  "contract": {
+    "expiry_years": 0.5,
+    "option_type": "call",
+    "strike": 100.0
+  },
+  "delta_hedging_by_rebalance_steps": {
+    "12": {
+      "fees": 0.01584660945678671,
+      "final_equity": 1.9033595571825401,
+      "hedge_trades": 12
+    },
+    "252": {
+      "fees": 0.06456072678061378,
+      "final_equity": -0.16207122078193947,
+      "hedge_trades": 252
+    },
+    "52": {
+      "fees": 0.03423431676099688,
+      "final_equity": 0.778089060464242,
+      "hedge_trades": 52
+    }
+  },
+  "limitations": [
+    "Geometric Brownian motion is a simplified price process.",
+    "Order flow is random and does not model adverse selection.",
+    "The simulator makes no claim of real-world profitability."
+  ],
+  "market_maker": {
+    "accepted_orders": 28,
+    "attribution": {
+      "fees": 0.20119551534328486,
+      "hedge_pnl": 0.0,
+      "inventory_pnl": -3.256260938246584,
+      "model_error": 0.0,
+      "spread_capture": 2.484256176515043,
+      "total": -0.9732002770748261
+    },
+    "final_equity": -0.973200277074826,
+    "hedge_trade_count": 44,
+    "option_inventory": 4,
+    "rejected_orders": 0,
+    "stock_inventory": -0.01637358122475341,
+    "terminal_spot": 93.45917749714796
+  },
+  "market_state": {
+    "rate": 0.03,
+    "spot": 100.0,
+    "timestamp_years": 0.0,
+    "volatility": 0.2
+  },
+  "pricing": {
+    "binomial_500_steps": 6.368215561628462,
+    "black_scholes": 6.371027942167466,
+    "greeks": {
+      "delta": 0.5701581024006669,
+      "gamma": 0.027772131739916564,
+      "rho": 25.322391148949613,
+      "theta": -7.07376981692029,
+      "vega": 27.772131739916567
+    },
+    "monte_carlo": {
+      "ci_high": 6.476479035594718,
+      "ci_low": 6.2424156290907735,
+      "paths": 25000,
+      "price": 6.359447332342746,
+      "seed": 7,
+      "standard_error": 0.05971005267957738
+    }
+  },
+  "research_question": "How do model and market frictions affect simulated option market-making P&L?",
+  "seed": 7
+}
